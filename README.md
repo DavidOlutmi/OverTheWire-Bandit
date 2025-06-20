@@ -95,7 +95,7 @@ Level 4 → 5
 -  Find the password in the only human-readable file in the inhere directory.
 
 🧠 Approach
--  Use file to identify the human-readable (ASCII) file.
+-  Use a file to identify the human-readable (ASCII) file.
 
 -  Use find to locate a file with the correct size.
 
@@ -104,7 +104,7 @@ Level 4 → 5
 🔧 Commands Used
 -  cd inhere
 -  ls -alps
--  find . type f | xargs file
+-  find. type f | xargs file
 -  cat ./-file07
 
  ☁️ Output Explanation
@@ -116,7 +116,7 @@ Level 5 → 6
 -  Find the password in the only human-readable file in the inhere directory. It's 1033 bytes in size, human readable,  and not executable.
 
 🧠 Approach
--  Use file to identify the human-readable (ASCII) file.
+-  Use a file to identify the human-readable (ASCII) file.
 
 -  Use find to locate a file with the correct size.
 
@@ -125,7 +125,7 @@ Level 5 → 6
 🔧 Commands Used
 -  cd inhere
 -  ls -alps
--  find . -type f -size 1033c ! -executable
+-  find. -type f -size 1033c! -executable
 -  cat .maybehere07/.file2
   
 ☁️ Output Explanation
@@ -157,7 +157,7 @@ Level 7 → 8
 - The password for the next level is stored in the file data.txt next to the word millionth
 
 🧠 Approach:
-- Use the Strings and grep command to find the line in the file that began with "millionth"/
+- Use the Strings and grep command to find the line in the file that begins with "millionth"/
 
 🔧 Commands Used:
 - ls
@@ -173,7 +173,7 @@ Level 8 → 9
 -  Find the only line in the data file that occurs only once.
 
 🧠 Approach:
-- Use sort to group duplicate lines together.
+- Use sort to group duplicate lines.
 - Pipe to uniq -u to display the unique line (the one that appears only once).
 
 🔧 Commands Used:
@@ -187,10 +187,10 @@ The file contained many repeated lines. By sorting and using uniq -u, we isolate
 <br>
 Level 9 → 10
 🎯 Objective:
--  Find the only human readable line that is preceeded by multiple "="
+-  Find the only human-readable line that is preceded by multiple "="
 
 🧠 Approach:
-- Use strings and grep command to find the line with the most "="
+- Use strings and the grep command to find the line with the most "="
   
 🔧 Commands Used:
 - ls
@@ -198,7 +198,7 @@ Level 9 → 10
 - strings data.txt | grep "="
   
 ☁️ Output Explanation:
-The file contained many unreadable lines, the best way was to ignore all other lines and focus on the lines with the "="
+The file contained many unreadable lines; the best way was to ignore all other lines and focus on the lines with the "="
 
 <br>
 Level 10 → 11
@@ -206,7 +206,7 @@ Level 10 → 11
 -  The password for the next level is stored in the file data.txt, which contains base64 encoded data
 
 🧠 Approach:
-- Use base64 command to decode the string
+- Use the base64 command to decode the string
   
 🔧 Commands Used:
 -  base64 -d data.txt
@@ -226,13 +226,13 @@ Level 11 → 12
 <br>
 Level 12 → 13
 🎯 Objective:
--  The password for the next level is stored in the file data.txt, which contains base64 encoded data
+-  
 
 🧠 Approach:
-- Use base64 command to decode the string
+- 
   
 🔧 Commands Used:
--  base64 -d data.txt
+-  
   
 ☁️ Output Explanation:
 The file contains only one line of base64 text that needs to be decoded.
