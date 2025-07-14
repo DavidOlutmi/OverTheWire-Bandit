@@ -248,7 +248,7 @@ cp ~/data.txt .
 xxd -r data.txt data
 file data
 mv data data.gz && gzip -d data.gz
-# ...repeat with bzip2, tar, etc
+...repeat with bzip2, tar, etc
 
   
 ☁️ Output Explanation:
