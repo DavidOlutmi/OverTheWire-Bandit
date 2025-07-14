@@ -28,6 +28,12 @@ Level 8 → 9
 
 Level 9 → 10
 
+Level 10 → 11
+
+Level 11 → 12
+
+Level 12 → 13
+
 <br>
 <br>
 
@@ -226,16 +232,45 @@ Level 11 → 12
 <br>
 Level 12 → 13
 🎯 Objective:
--  
+-  The password is stored in a hexdump file that has been repeatedly compressed in various formats.
 
 🧠 Approach:
-- 
+- Created a temporary working directory using `mkdir /tmp/mydir` because we don't have write permissions in the home directory.
+- Copied the file into it: `cp ~/data.txt .`
+- Reversed the hexdump using `xxd -r`.
+- Used `file` to detect the current compression type.
+- Renamed the file with the correct extension (e.g., `.gz`, `.bz2`, `.tar`) and decompressed it using the appropriate tools.
+- Repeated the process until reaching an ASCII file containing a base64-encoded password.
   
 🔧 Commands Used:
--  
+mkdir /tmp/mydir && cd /tmp/mydir
+cp ~/data.txt .
+xxd -r data.txt data
+file data
+mv data data.gz && gzip -d data.gz
+# ...repeat with bzip2, tar, etc
+
   
 ☁️ Output Explanation:
-The file contains only one line of base64 text that needs to be decoded.
-  
+Since the level's home directory is not writable, creating a working directory in /tmp is necessary. Use file to identify each format, rename accordingly, and decompress step-by-step to extract the final password.
+
+
+
+<br>
+Level 3 → 4
+🎯 Objective
+-  
+
+🧠 Approach
+-  
+
+🔧 Commands Used
+-  
+
+
+☁️ Output Explanation
+-  
+
+<br>
 
 
